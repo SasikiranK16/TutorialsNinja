@@ -19,5 +19,12 @@ public class RegisterAccountNinja implements RegisterAccount{
 		// TODO Auto-generated method stub
 		firstNam.sendKeys(name);
 	}
+	@FindBy(name = "lastname")
+	private WebElement lastNam;
+	@Override
+	public void setLastName(String lname) {
+		// TODO Auto-generated method stub
+		lastNam.sendKeys(lname);
+	}
 	
 }

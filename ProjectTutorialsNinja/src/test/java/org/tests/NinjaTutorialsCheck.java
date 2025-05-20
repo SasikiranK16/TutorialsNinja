@@ -3,7 +3,6 @@ package org.tests;
 import java.io.IOException;
 
 import org.bases.BaseTutorialsNinja;
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -14,8 +13,10 @@ public class NinjaTutorialsCheck extends BaseTutorialsNinja {
 		ninjaPage.clickMyAccount();
 		ninjaPage.clickRegister();
 		accountNinja.setFirstName("Hello");
-		takeScreenshot("testOne");
-		takeFullScreenshot("FullScreenOne");
+//		takeScreenshot("testOne");
+//		takeFullScreenshot("FullScreenOne");
+		accountNinja.setLastName("World");
+		extentReports();
 	}
 	
 	@BeforeSuite

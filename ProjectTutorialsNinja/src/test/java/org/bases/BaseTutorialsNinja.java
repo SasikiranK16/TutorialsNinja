@@ -1,5 +1,6 @@
 package org.bases;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,6 +17,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.pages.RegisterAccountNinja;
 import org.pages.TutorialsNinjaPage;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
@@ -75,5 +81,21 @@ public class BaseTutorialsNinja {
 				.takeScreenshot(driver);
 		ImageIO.write(screenshot.getImage(), "JPEG", new File(System.getProperty("user.dir")
 				+ "\\scrennShots\\"+name+".jpeg"));
+	}
+	public ExtentReports extentReports() throws IOException {
+		
+		ExtentReports extentReports = new ExtentReports();
+		File fs = new File(System.getProperty("user.dir")+"//extentreports//ExtentReports.html");
+		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(fs);
+		ExtentTest ax = extentReports.createTest("Tutorials Ninja Project");
+		ax.assignAuthor("Sasikiran Kakara");
+		ax.assignCategory("Automation Testing");
+		ax.assignDevice("Laptop");
+		ax.log(Status.PASS,"Successfully Passed!!");
+		extentReports.attachReporter(extentSparkReporter);
+		extentReports.flush();
+		Desktop.getDesktop().browse(fs.toURI());
+		return extentReports;
+		
 	}
 }
