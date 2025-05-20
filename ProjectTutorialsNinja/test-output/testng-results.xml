@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-20T11:01:41 IST" name="Default suite" finished-at="2025-05-20T11:01:43 IST" duration-ms="2299">
+  <suite started-at="2025-05-20T11:19:26 IST" name="Default suite" finished-at="2025-05-20T11:19:29 IST" duration-ms="3134">
     <groups>
     </groups>
-    <test started-at="2025-05-20T11:01:41 IST" name="Default test" finished-at="2025-05-20T11:01:43 IST" duration-ms="2299">
+    <test started-at="2025-05-20T11:19:26 IST" name="Default test" finished-at="2025-05-20T11:19:29 IST" duration-ms="3134">
       <class name="org.tests.NinjaTutorialsCheck">
-        <test-method is-config="true" signature="launch()[pri:0, instance:org.tests.NinjaTutorialsCheck@72d1ad2e]" started-at="2025-05-20T11:01:36 IST" name="launch" finished-at="2025-05-20T11:01:41 IST" duration-ms="5434" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:org.tests.NinjaTutorialsCheck@72d1ad2e]" started-at="2025-05-20T11:19:19 IST" name="launch" finished-at="2025-05-20T11:19:26 IST" duration-ms="7397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method signature="checkOne()[pri:0, instance:org.tests.NinjaTutorialsCheck@72d1ad2e]" started-at="2025-05-20T11:01:41 IST" name="checkOne" finished-at="2025-05-20T11:01:43 IST" duration-ms="2211" status="PASS">
+        <test-method signature="checkOne()[pri:0, instance:org.tests.NinjaTutorialsCheck@72d1ad2e]" started-at="2025-05-20T11:19:26 IST" name="checkOne" finished-at="2025-05-20T11:19:29 IST" duration-ms="3025" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkOne -->

@@ -63,17 +63,17 @@ public class BaseTutorialsNinja {
 		return driver;
 	}
 
-	public void takeScreenshot() throws IOException {
+	public void takeScreenshot(String name) throws IOException {
 		TakesScreenshot ts = ((TakesScreenshot) driver);
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dsrc = new File(System.getProperty("user.dir") + "//imagesScreenshots//one.png");
+		File dsrc = new File(System.getProperty("user.dir") + "//imagesScreenshots//"+name+".png");
 		FileUtils.copyFile(src, dsrc);
 	}
 
-	public void takeFullScreenshot() throws IOException {
+	public void takeFullScreenshot(String name) throws IOException {
 		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100))
 				.takeScreenshot(driver);
 		ImageIO.write(screenshot.getImage(), "JPEG", new File(System.getProperty("user.dir")
-				+ "\\scrennShots\\one.jpeg"));
+				+ "\\scrennShots\\"+name+".jpeg"));
 	}
 }

@@ -14,8 +14,8 @@ public class NinjaTutorialsCheck extends BaseTutorialsNinja {
 		ninjaPage.clickMyAccount();
 		ninjaPage.clickRegister();
 		accountNinja.setFirstName("Hello");
-		takeScreenshot();
-		takeFullScreenshot();
+		takeScreenshot("testOne");
+		takeFullScreenshot("FullScreenOne");
 	}
 	
 	@BeforeSuite
