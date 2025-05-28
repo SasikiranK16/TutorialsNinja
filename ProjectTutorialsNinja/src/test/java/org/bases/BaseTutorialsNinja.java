@@ -33,7 +33,10 @@ public class BaseTutorialsNinja {
 	public FileInputStream fileInputStream;
 	public WebDriver driver;
 	public RegisterAccountNinja accountNinja;
-
+	public static ExtentReports extentReports;
+	public static ExtentSparkReporter extentSparkReporter;
+	public static ExtentTest extentTest;
+	public static File fs;
 	public Properties getPropertyDetails() throws IOException {
 		properties = new Properties();
 		fileInputStream = new FileInputStream(
@@ -82,20 +85,21 @@ public class BaseTutorialsNinja {
 		ImageIO.write(screenshot.getImage(), "JPEG", new File(System.getProperty("user.dir")
 				+ "\\scrennShots\\"+name+".jpeg"));
 	}
-	public ExtentReports extentReports() throws IOException {
+	public static ExtentReports extentReports() {
 		
-		ExtentReports extentReports = new ExtentReports();
-		File fs = new File(System.getProperty("user.dir")+"//extentreports//ExtentReports.html");
-		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(fs);
-		ExtentTest ax = extentReports.createTest("Tutorials Ninja Project");
-		ax.assignAuthor("Sasikiran Kakara");
-		ax.assignCategory("Automation Testing");
-		ax.assignDevice("Laptop");
-		ax.log(Status.PASS,"Successfully Passed!!");
+		extentReports = new ExtentReports();
+		fs = new File(System.getProperty("user.dir")+"//extentreports//ExtentReports.html");
+		extentSparkReporter = new ExtentSparkReporter(fs);
 		extentReports.attachReporter(extentSparkReporter);
+		try {
+			Desktop.getDesktop().browse(fs.toURI());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		extentReports.flush();
-		Desktop.getDesktop().browse(fs.toURI());
 		return extentReports;
 		
 	}
+
 }

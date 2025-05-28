@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.tests.NinjaTutorialsCheck">
+      <class name="org.customized.methods.Rough">
         <methods>
-          <include name="checkOne"/>
-          <include name="launch"/>
+          <include name="testName"/>
         </methods>
-      </class> <!-- org.tests.NinjaTutorialsCheck -->
+      </class> <!-- org.customized.methods.Rough -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

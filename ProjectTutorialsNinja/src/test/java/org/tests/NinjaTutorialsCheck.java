@@ -17,6 +17,7 @@ public class NinjaTutorialsCheck extends BaseTutorialsNinja {
 //		takeFullScreenshot("FullScreenOne");
 		accountNinja.setLastName("World");
 		extentReports();
+		
 	}
 	
 	@BeforeSuite
