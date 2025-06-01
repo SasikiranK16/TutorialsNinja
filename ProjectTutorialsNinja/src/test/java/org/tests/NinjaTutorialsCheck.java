@@ -16,13 +16,15 @@ public class NinjaTutorialsCheck extends BaseTutorialsNinja {
 //		takeScreenshot("testOne");
 //		takeFullScreenshot("FullScreenOne");
 		accountNinja.setLastName("World");
-		extentReports();
+		createTest("TestTests");
+		
+		
 		
 	}
 	
 	@BeforeSuite
 	public void launch() throws IOException {
-		getPropertyDetails();
+		getPropertyDetails("bunny");
 		System.out.println(properties.getProperty("browser"));
 		System.out.println(properties.getProperty("url"));
 		optBrowser(properties.getProperty("browser"));

@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\kakar\AppData\Local\Temp\testng-eclipse--1093085807\testng-customsuite.xml</span>
+                    <span>C:\Users\kakar\AppData\Local\Temp\testng-eclipse-1372624546\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.customized.methods.Rough" class="method navigator-link" hash-for-method="TestTwo">TestTwo</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.customized.methods.Rough" class="method navigator-link" hash-for-method="testName">testName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="org.customized.methods.Rough" class="method navigator-link" hash-for-method="testOnes">testOnes</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="org.bases.RunnerProjectDriver" class="method navigator-link" hash-for-method="testOne">testOne</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,28 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">org.customized.methods.Rough</span>
+              <span class="class-name">org.bases.RunnerProjectDriver</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestTwo">
-                  </a> <!-- TestTwo -->
-                  <span class="method-name">TestTwo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testName">
-                  </a> <!-- testName -->
-                  <span class="method-name">testName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testOnes">
-                  </a> <!-- testOnes -->
-                  <span class="method-name">testOnes</span>
+                  <a name="testOne">
+                  </a> <!-- testOne -->
+                  <span class="method-name">testOne</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -160,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kakar\AppData\Local\Temp\testng-eclipse--1093085807\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\kakar\AppData\Local\Temp\testng-eclipse-1372624546\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -169,7 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.customized.methods.Rough&quot;/&gt;
+      &lt;class name=&quot;org.bases.RunnerProjectDriver&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testOne&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- org.bases.RunnerProjectDriver --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -209,24 +189,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestTwo')
-data.setCell(0, 2, 'org.customized.methods.Rough')
-data.setCell(0, 3, 22);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testName')
-data.setCell(1, 2, 'org.customized.methods.Rough')
-data.setCell(1, 3, 2);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testOnes')
-data.setCell(2, 2, 'org.customized.methods.Rough')
-data.setCell(2, 3, 2);
+data.setCell(0, 1, 'testOne')
+data.setCell(0, 2, 'org.bases.RunnerProjectDriver')
+data.setCell(0, 3, 8944);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 ms</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -241,9 +213,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">org.bases.RunnerProjectDriver</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testTwo</span>
+                <br/>
+                <span class="ignored-method-name">testThree</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -252,18 +233,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.customized.methods.Rough</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">TestTwo</span>
+              <div class="chronological-class-name">org.bases.RunnerProjectDriver</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launch</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">testName</span>
-                <span class="method-start">31 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testOnes</span>
-                <span class="method-start">38 ms</span>
+                <span class="method-name">testOne</span>
+                <span class="method-start">13121 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

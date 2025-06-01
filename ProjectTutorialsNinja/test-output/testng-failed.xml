@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.customized.methods.Rough">
+      <class name="org.bases.RunnerProjectDriver">
         <methods>
-          <include name="testName"/>
+          <include name="testOne"/>
+          <include name="launch"/>
         </methods>
-      </class> <!-- org.customized.methods.Rough -->
+      </class> <!-- org.bases.RunnerProjectDriver -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

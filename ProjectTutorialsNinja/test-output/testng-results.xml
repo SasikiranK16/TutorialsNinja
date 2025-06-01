@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-28T15:11:28 IST" name="Default suite" finished-at="2025-05-28T15:11:28 IST" duration-ms="116">
+  <suite started-at="2025-06-02T02:02:07 IST" name="Default suite" finished-at="2025-06-02T02:02:29 IST" duration-ms="22149">
     <groups>
     </groups>
-    <test started-at="2025-05-28T15:11:28 IST" name="Default test" finished-at="2025-05-28T15:11:28 IST" duration-ms="116">
-      <class name="org.customized.methods.Rough">
-        <test-method signature="TestTwo()[pri:0, instance:org.customized.methods.Rough@10e31a9a]" started-at="2025-05-28T15:11:28 IST" name="TestTwo" finished-at="2025-05-28T15:11:28 IST" duration-ms="22" status="PASS">
+    <test started-at="2025-06-02T02:02:07 IST" name="Default test" finished-at="2025-06-02T02:02:29 IST" duration-ms="22149">
+      <class name="org.bases.RunnerProjectDriver">
+        <test-method is-config="true" signature="launch()[pri:0, instance:org.bases.RunnerProjectDriver@8f4ea7c]" started-at="2025-06-02T02:02:07 IST" name="launch" finished-at="2025-06-02T02:02:20 IST" duration-ms="12877" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestTwo -->
-        <test-method signature="testName()[pri:0, instance:org.customized.methods.Rough@10e31a9a]" started-at="2025-05-28T15:11:28 IST" name="testName" finished-at="2025-05-28T15:11:28 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- launch -->
+        <test-method signature="testOne()[pri:0, instance:org.bases.RunnerProjectDriver@8f4ea7c]" started-at="2025-06-02T02:02:20 IST" name="testOne" finished-at="2025-06-02T02:02:29 IST" duration-ms="8944" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testName -->
-        <test-method signature="testOnes()[pri:0, instance:org.customized.methods.Rough@10e31a9a]" started-at="2025-05-28T15:11:28 IST" name="testOnes" finished-at="2025-05-28T15:11:28 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOnes -->
-      </class> <!-- org.customized.methods.Rough -->
+        </test-method> <!-- testOne -->
+      </class> <!-- org.bases.RunnerProjectDriver -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

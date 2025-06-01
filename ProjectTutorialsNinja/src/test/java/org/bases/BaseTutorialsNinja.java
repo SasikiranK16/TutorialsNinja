@@ -1,6 +1,5 @@
 package org.bases;
 
-import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,6 +8,7 @@ import java.util.Properties;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
+import org.customized.methods.CustomizedMethods;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -27,20 +27,20 @@ import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class BaseTutorialsNinja {
+public class BaseTutorialsNinja extends CustomizedMethods {
 	public TutorialsNinjaPage ninjaPage;
 	public Properties properties;
 	public FileInputStream fileInputStream;
-	public WebDriver driver;
+	public static WebDriver driver;
 	public RegisterAccountNinja accountNinja;
 	public static ExtentReports extentReports;
 	public static ExtentSparkReporter extentSparkReporter;
 	public static ExtentTest extentTest;
 	public static File fs;
-	public Properties getPropertyDetails() throws IOException {
+	public Properties getPropertyDetails(String name) throws IOException {
 		properties = new Properties();
 		fileInputStream = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\main\\java\\org\\utils\\Prop.properties");
+				System.getProperty("user.dir") + "\\src\\main\\java\\org\\utils\\"+name+".properties");
 		properties.load(fileInputStream);
 		return properties;
 	}
@@ -66,13 +66,15 @@ public class BaseTutorialsNinja {
 		return driver;
 	}
 
-	public WebDriver commonDeclares(WebDriver driver) {
+	public WebDriver commonDeclares(WebDriver driver) throws IOException {
 		ninjaPage = new TutorialsNinjaPage(driver);
 		accountNinja = new RegisterAccountNinja(driver);
+		ExtentReports extentReports = getReports("God");
+		
 		return driver;
 	}
 
-	public void takeScreenshot(String name) throws IOException {
+	public static void takeScreenshot(String name) throws IOException {
 		TakesScreenshot ts = ((TakesScreenshot) driver);
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File dsrc = new File(System.getProperty("user.dir") + "//imagesScreenshots//"+name+".png");
@@ -85,21 +87,6 @@ public class BaseTutorialsNinja {
 		ImageIO.write(screenshot.getImage(), "JPEG", new File(System.getProperty("user.dir")
 				+ "\\scrennShots\\"+name+".jpeg"));
 	}
-	public static ExtentReports extentReports() {
-		
-		extentReports = new ExtentReports();
-		fs = new File(System.getProperty("user.dir")+"//extentreports//ExtentReports.html");
-		extentSparkReporter = new ExtentSparkReporter(fs);
-		extentReports.attachReporter(extentSparkReporter);
-		try {
-			Desktop.getDesktop().browse(fs.toURI());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		extentReports.flush();
-		return extentReports;
-		
-	}
+	
 
 }
